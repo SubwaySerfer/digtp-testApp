@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Oranienbaum&display=swap');
+
+html {
+  font-size: 10px;
+  font-family: 'Oranienbaum', serif;
+  /* font-family: 'Noto Sans', sans-serif; */
+}
+.btn-root {
+  transition: transform ease-in 0.25s;
+}
+.btn-root:hover {
+  /* transform: translateY(-3px); */
+  transform: scale(1.2);
+}
+.btn-root_vertical {
+  transition: transform ease-in-out 0.25s;
+}
+.btn-root_vertical:hover {
+  transform: translateY(-3px);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: start center;
+  min-width: 320px;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.btn {
+  display: flex;
+  width: 25.2rem;
+  padding: 1.8rem 3.2rem;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid #f0d683;
+  color: #000;
+  font-family: Oranienbaum;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background: linear-gradient(#9f734c, #f0d683);
+  cursor: pointer;
+}
+.btn:hover {
+  background: #f0d683;
+  border: 1px solid #9f734c;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  flex: 1;
+  width: 100%;
+  max-width: 1920px;
+  /* box-shadow: 2px 5px 10px 1px rgba(143, 135, 143, 1); */
+}
+
+main {
+  flex: 1;
+}
+figure {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 1920px) {
+  #app {
+    box-shadow: 3px 5px 10px 2px rgb(109, 109, 109);
+  }
+}
