@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import HomePage from '../pages/home/HomePage.vue';
+import LoginPage from '../pages/login/LoginPage.vue';
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+    // {
+    //   path: '/',
+    //   redirect: '/home',
+    // },
     {
-      path: '/',
-      redirect: '/home',
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: HomePage,
+      path: '/login',
+      name: 'login',
+      component: LoginPage,
     },],
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 };

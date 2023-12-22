@@ -33,29 +33,27 @@ h1 {
 }
 
 .btn {
-  display: flex;
-  width: 25.2rem;
-  padding: 1.8rem 3.2rem;
-  justify-content: center;
-  height: 100%;
-  align-items: center;
-  gap: 1rem;
-  border-radius: 0.8rem;
-  border: 1px solid #f0d683;
-  color: #000;
-  font-family: Oranienbaum;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  background: linear-gradient(#9f734c, #f0d683);
+  border-radius: 1rem;
+  background: #3ea748;
   cursor: pointer;
+  display: flex;
+  width: 16rem;
+  height: 5rem;
+  padding: 1.6rem 3.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border: 0;
+  color: #fff;
+  font-family: Cera Pro;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 .btn:hover {
-  background: #f0d683;
-  border: 1px solid #9f734c;
+  /* background: #f0d683;
+  border: 1px solid #9f734c; */
 }
 .btn:focus,
 .btn:focus-visible {
