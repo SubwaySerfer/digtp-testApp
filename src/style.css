@@ -55,6 +55,7 @@ h1 {
   align-items: center;
   gap: 0.8rem;
   border: 0;
+  text-wrap: nowrap;
   color: #fff;
   font-family: Cera Pro;
   font-size: 1.6rem;
@@ -70,6 +71,10 @@ h1 {
   border: 1px solid #3ea748;
   background: transparent;
 }
+.btn__no-border {
+  border: none;
+}
+/* TODO: проверить нужна ли */
 .btn:hover {
   /* background: #f0d683;
   border: 1px solid #9f734c; */
