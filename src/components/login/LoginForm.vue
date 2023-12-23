@@ -14,7 +14,7 @@
   align-items: flex-start;
   gap: 1rem;
   color: #000;
-  font-family: Cera Pro;
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
 }
 

@@ -51,9 +51,9 @@ export default {
   text-align: start;
   align-items: start;
   gap: .8rem;
-  color: var(--Untitled-text-2-color, #676767);
+  color: #676767;
   width: 26rem;
-  font-family: Cera Pro;
+  font-family: 'PT Sans', sans-serif;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;

@@ -29,6 +29,6 @@ export default {
   text-align: start;
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 </style>

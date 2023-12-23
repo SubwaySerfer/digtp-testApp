@@ -42,12 +42,12 @@
   padding: 8rem 11.45vw 9rem 3rem;
   width: 100%;
   background: #F6F6F6;
-  gap: 5rem;
+  gap: 4.8rem;
 }
 
 .label-block__title {
   color: #000;
-  font-family: Cera Pro;
+  font-family: 'PT Sans', sans-serif;
   font-size: 4rem;
   font-style: normal;
   font-weight: 500;
@@ -90,13 +90,18 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  padding-top: 3px;
 }
 
 .flex-1 {
-  margin-bottom: 5.8rem;
+  padding-top: .6rem;
+  margin-bottom: 4.8rem;
 }
 
 .list__btn {
   align-self: end;
+  width: 17.9rem;
+  height: 4.2rem;
+  padding: 1.6rem 3.2rem;
 }
 </style>
