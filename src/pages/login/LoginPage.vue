@@ -6,8 +6,8 @@
       <div class="contant-info">
         <p>Если возникла проблема, то можете написать <span class="contant-info__description__links">Алёне из
             Сибтеха</span>
-        <p>С любовью, ваш <span class="contant-info__description__links">Сибтех</span> </p>
         </p>
+        <p>С любовью, ваш <span class="contant-info__description__links">Сибтех</span> </p>
       </div>
     </div>
     <login-background></login-background>
