@@ -2,7 +2,7 @@
 
 html {
   font-size: 10px;
-  font-family: 'Oranienbaum', serif;
+  font-family: Cera Pro;
   /* font-family: 'Noto Sans', sans-serif; */
 }
 .btn-root {
@@ -22,6 +22,15 @@ html {
   color: #000;
   font-family: Cera Pro;
   font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* width: auto; */
+}
+.text-font__description {
+  font-family: Cera Pro;
+  opacity: 0.5;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
