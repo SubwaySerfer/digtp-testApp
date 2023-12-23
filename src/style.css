@@ -18,6 +18,17 @@ html {
 .btn-root_vertical:hover {
   transform: translateY(-3px);
 }
+.text-font {
+  color: #000;
+  font-family: Cera Pro;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.text-font__green {
+  color: #3ea748;
+}
 
 body {
   margin: 0;

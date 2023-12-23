@@ -1,16 +1,16 @@
 <template>
   <div class="sidebar">
     <img src="/assets/icons/label-icon.svg" alt="Tomsk polytech logo." class="sidebar__logo">
-    <!-- <slot>
+    <slot class="sidebar__slot">
 
-    </slot> -->
+    </slot>
     <!-- <div class="contant-info">
       <p>Если возникла проблема, то можете написать <span class="contant-info__description__links">Алёне из
           Сибтеха</span>
       </p>
       <p>С любовью, ваш <span class="contant-info__description__links">Сибтех</span> </p>
     </div> -->
-    <button class="btn" v-if="buttonText" :class="modeBtn">{{ buttonText }}</button>
+    <button class="btn " v-if="buttonText" :class="modeBtn">{{ buttonText }}</button>
   </div>
 </template>
 
@@ -28,7 +28,11 @@ export default {
   justify-content: space-between;
   height: 100%;
   padding: 8rem 12.22vw 6.2rem;
+  width: 43.4rem;
+  gap: 3rem;
 }
+
+
 
 .sidebar__logo {
   width: 11.7rem;
