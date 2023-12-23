@@ -51,6 +51,14 @@ h1 {
   font-weight: 500;
   line-height: normal;
 }
+.btn__transparent {
+  width: 16rem;
+  height: 5.1rem;
+  color: #3ea748;
+  border-radius: 1rem;
+  border: 1px solid #3ea748;
+  background: transparent;
+}
 .btn:hover {
   /* background: #f0d683;
   border: 1px solid #9f734c; */
