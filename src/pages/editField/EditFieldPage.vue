@@ -1,6 +1,6 @@
 <template>
   <main class="edit-page">
-    <the-sidebar buttonText="Сохранить" secondButton="Скрипт">
+    <the-sidebar buttonText="Сохранить" secondButton="Скрипт" secModeBtn="btn__transparent">
       <div><img src="" alt=""><span>Назад</span></div>
       <ul class="edit-sidebar">
         <li>Тип формы</li>

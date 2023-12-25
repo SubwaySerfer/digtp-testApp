@@ -10,7 +10,7 @@
       </p>
       <p>С любовью, ваш <span class="contant-info__description__links">Сибтех</span> </p>
     </div> -->
-    <button v-if="secondButton" class="btn">{{ secondButton }}</button>
+    <button v-if="secondButton" class="btn" :class="secModeBtn">{{ secondButton }}</button>
     <button class="btn " v-if="buttonText" :class="modeBtn">{{ buttonText }}</button>
   </div>
 </template>
@@ -20,7 +20,8 @@ export default {
   props: [
     "buttonText",
     "modeBtn",
-    "secondButton"]
+    "secondButton",
+    "secModeBtn"]
 }
 </script>
 <style scoped>
