@@ -1,6 +1,6 @@
 <template>
   <main class="edit-page">
-    <the-sidebar buttonText="Сохранить" secondButton="Скрипт" secModeBtn="btn__transparent">
+    <the-sidebar buttonText="Сохранить" secondButton="Скрипт" secModeBtn="btn__transparent" :buttonFunc=cll>
       <div class="back-page"><img src="/assets/icons/arrow-icon.svg" alt="arrow back page."><span>Назад</span></div>
       <ul class="edit-sidebar">
         <li>Тип формы</li>
@@ -23,6 +23,11 @@ export default {
   components: {
     SignupForm,
     AddFields
+  },
+  methods: {
+    cll() {
+      this.$router.push('/form-perfome')
+    }
   }
 }
 </script>

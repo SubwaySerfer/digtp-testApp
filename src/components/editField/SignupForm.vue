@@ -2,16 +2,32 @@
   <div class="register-wrapper">
     <form action="" class="register-form">
       <label for="" class="register-form__label">Форма регистрации участников</label>
-      <input type="text" class="register-form__input" placeholder="Фамилия">
-      <input type="text" class="register-form__input" placeholder="Имя">
+      <ul class="register-list">
+        <li v-for="field in getFieldsData">
+          <input type="text" class="register-form__input" :placeholder=field.id :required=field.required>
+        </li>
+        <!-- <li> <input type="text" class="register-form__input" placeholder="Имя">
+        </li> -->
+      </ul>
       <div class="register-form__rights">
-        <input type="ratio" class="rights__input">
+        <input type="checkbox" class="rights__input">
         <p class="rights__description">Нажимая кнопку «Отправить», я принимаю условия политики конфиденциальности</p>
       </div>
       <button class="btn register__btn">Отправить</button>
     </form>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    getFieldsData() {
+      return this.$store.getters['fields/getCurrentFields']
+    }
+  }
+}
+
+</script>
 
 <style scoped>
 .register-wrapper {
@@ -32,7 +48,9 @@
   border-radius: 2rem;
   background: #FFF;
   width: 34.9rem;
-  height: 50.4rem;
+  /* height: 50.4rem; */
+  height: min-content;
+  /* min-height: 50.4rem; */
   padding: 4rem;
 }
 
@@ -43,6 +61,12 @@
   line-height: normal;
   text-align: start;
   margin-bottom: 2.7rem;
+}
+
+.register-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .register-form__input {
@@ -64,11 +88,14 @@
 }
 
 .rights__input {
-  width: 2.4rem;
+  width: 5rem;
   height: 2.4rem;
   border-radius: 0.4rem;
   border: 1px solid #3EA748;
+  margin: 0;
   margin-top: .55rem;
+  align-self: start;
+
 }
 
 .register-form__rights {

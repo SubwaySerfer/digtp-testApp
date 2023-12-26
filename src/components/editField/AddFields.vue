@@ -3,8 +3,8 @@
     <div class="fields-editor">
       <h1 class="fields-editor__label">Поля</h1>
       <h2 class="fields-editor__h2">Скрытые поля</h2>
-      <base-dots-button buttonText="Добавить поле"></base-dots-button>
-      <div class="modal-list">
+      <base-dots-button buttonText="Добавить поле" @click="toggleAddList"></base-dots-button>
+      <div class="modal-list" v-show="isAddListOpen">
         <ul class="add-list">
           <li class="add-list__elem" @click="addfield('Фамилия')" id="Фамилия"><span>Фамилия</span> <img
               src="/assets/icons/plus-icon.svg" alt="plus string.">
@@ -27,13 +27,13 @@
       <div class="fields-block">
         <div class="fields-block__elem" v-for="field in getFieldsData">
           <div class="elem-box">
-            <div class="label-box"><span class="label-box__label">{{ field }}</span><span
+            <div class="label-box"><span class="label-box__label">{{ field.id }}</span><span
                 class="label-box__label">Контакт</span> </div>
-            <button class="elem-box__btn" @click="addfield(field)">Удалить поле</button>
+            <button class="elem-box__btn" @click="addfield(field.id)">Удалить поле</button>
           </div>
-          <input type="text" :placeholder="field" class="elem__input">
+          <input type="text" :placeholder="field.id" class="elem__input">
           <div class="ratio-box">
-            <input type="checkbox" class="ratio-box__input" name="last_name">
+            <input type="checkbox" class="ratio-box__input" name="last_name" @click="toggleRequared(field.id)">
             <label for="last_name" class="ratio-box__label">Сделать поле обязательным</label>
           </div>
         </div>
@@ -64,7 +64,7 @@
         </div> -->
       </div>
       <!--  -->
-      <base-dots-button buttonText="Добавить поле"></base-dots-button>
+      <base-dots-button buttonText="Добавить поле" @click="toggleAddList"></base-dots-button>
       <base-dots-button buttonText="Добавить страницу формы"></base-dots-button>
 
     </div>
@@ -73,10 +73,26 @@
 
 <script>
 export default {
-  mounted() {
-    this.getFieldsData.forEach(el => this.createClassList(el))
+  data() {
+    return {
+      isAddListOpen: false,
+      counter: 0,
+    }
   },
+  // mounted() {
+  //   this.getFieldsData.forEach(el => this.createClassList(el))
+  // },
   methods: {
+    toggleAddList() {
+      this.isAddListOpen = !this.isAddListOpen
+      if (this.counter == 0) {
+        this.getFieldsData.forEach(el => this.createClassList(el.id))
+        this.counter++
+      }
+    },
+    toggleRequared(id) {
+      this.$store.commit('fields/toggleReguired', id)
+    },
     addfield(id) {
       this.toggleClassList(id)
       this.$store.commit('fields/addField', id)
@@ -85,7 +101,7 @@ export default {
       document.getElementById(`${id}`).classList.add('add-list__elem__active')
     },
     toggleClassList(id) {
-      if (this.getFieldsData.includes(id)) {
+      if (this.getFieldsData.map(el => el.id).includes(id)) {
         document.getElementById(`${id}`).classList.remove('add-list__elem__active')
       } else {
         document.getElementById(`${id}`).classList.add('add-list__elem__active')

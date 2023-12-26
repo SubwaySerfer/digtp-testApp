@@ -12,7 +12,7 @@
     </div> -->
     <div class="buttons-block">
       <button v-if="secondButton" class="btn" :class="secModeBtn">{{ secondButton }}</button>
-      <button class="btn " v-if="buttonText" :class="modeBtn">{{ buttonText }}</button>
+      <button class="btn " v-if="buttonText" :class="modeBtn" @click=buttonFunc> {{ buttonText }}</button>
     </div>
 
   </div>
@@ -24,7 +24,9 @@ export default {
     "buttonText",
     "modeBtn",
     "secondButton",
-    "secModeBtn"]
+    "secModeBtn",
+    "buttonFunc"
+  ]
 }
 </script>
 <style scoped>

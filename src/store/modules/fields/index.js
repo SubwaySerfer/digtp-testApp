@@ -4,7 +4,14 @@ import getters from "./getters";
 export default {
   namespaced: true, state() {
     return {
-      currentFields: ['Фамилия', 'Имя'
+      currentFields: [
+        {
+          'id': 'Фамилия', required: false
+          ,
+        }, {
+          'id': 'Имя', required: false
+        }
+
       ]
     }
   },
