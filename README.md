@@ -15,10 +15,20 @@
    2.3) установка обязательности заполнения полей
    !2.4) отображение актуальных настроек формы в области предпросмотра
 
-3. реализовать открытие формы с актуальными настройками на отдельной веб-странице"
+3. реализовать открытие формы с актуальными настройками на отдельной веб-странице" //Нажмите кнопку "сохранить"
 
-[Ссылка на деплой](preeminent-kitten-83a2eb.netlify.app)
+[Ссылка на деплой](https://preeminent-kitten-83a2eb.netlify.app)
+
 [Ссылка на макет](https://www.figma.com/file/pObrgEFHQniLC9K5zXpcoF/Тестовое?type=design&node-id=0%3A1&mode=design&t=U0n14JDnerpDrqzE-1)
+
+---
+
+## Страницы
+
+- [Логин](https://preeminent-kitten-83a2eb.netlify.app/login)
+- [Формы](https://preeminent-kitten-83a2eb.netlify.app/forms)
+- [Редактор полей](https://preeminent-kitten-83a2eb.netlify.app/fields)
+- [Отдельная страница с формой](https://preeminent-kitten-83a2eb.netlify.app/form-perfome)
 
 ---
 
