@@ -3,7 +3,14 @@
     <div class="fields-editor">
       <h1 class="fields-editor__label">Поля</h1>
       <h2 class="fields-editor__h2">Скрытые поля</h2>
-      <base-dots-button buttonText="Добавить поле"></base-dots-button>
+      <base-dots-button buttonText="Добавить поле" @click="addCl"></base-dots-button>
+      <div class="modal-list">
+        <ul class="add-list">
+          <li class="add-list__elem"><span>Строка</span> <img src="/assets/icons/plus-icon.svg" alt="plus string."></li>
+          <li class="add-list__elem"><span>Число</span> <img src="/assets/icons/plus-icon.svg" alt="plus number."></li>
+          <li class="add-list__elem"><span>Список</span> <img src="/assets/icons/plus-icon.svg" alt="plus list."></li>
+        </ul>
+      </div>
       <h2 class="fields-editor__h2 mr-tp">Поля</h2>
       <div class="fields-block">
         <div class="fields-block__elem">
@@ -39,6 +46,17 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  methods: {
+    addCl() {
+      console.log('hh')
+    }
+  }
+}
+
+</script>
 
 <style scoped>
 .mr-tp {
@@ -163,5 +181,38 @@
   padding: 0;
   border: none;
   background: transparent;
+}
+
+.modal-list {
+  padding: 1rem;
+  border: 1px solid #3EA748;
+  width: 41.5rem;
+  border-radius: 1rem;
+}
+
+.add-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: .8rem;
+}
+
+.add-list__elem {
+  border: 1px dotted #3EA748;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  color: #000;
+  /* font-family: Cera Pro; */
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 1rem
 }
 </style>
