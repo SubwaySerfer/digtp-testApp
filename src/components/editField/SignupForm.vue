@@ -8,7 +8,7 @@
         <input type="ratio" class="rights__input">
         <p class="rights__description">Нажимая кнопку «Отправить», я принимаю условия политики конфиденциальности</p>
       </div>
-      <button class="btn">Отправить</button>
+      <button class="btn register__btn">Отправить</button>
     </form>
   </div>
 </template>
@@ -19,15 +19,16 @@
   background: #3EA748;
   display: flex;
   width: 100%;
-  padding: 8.8rem 6.94vw;
-  justify-content: end;
+  padding: 8.8rem 6.81vw;
+  justify-content: center;
 }
 
 .register-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 1rem;
   border-radius: 2rem;
   background: #FFF;
   width: 34.9rem;
@@ -41,6 +42,7 @@
   font-weight: 500;
   line-height: normal;
   text-align: start;
+  margin-bottom: 2.7rem;
 }
 
 .register-form__input {
@@ -66,6 +68,7 @@
   height: 2.4rem;
   border-radius: 0.4rem;
   border: 1px solid #3EA748;
+  margin-top: .55rem;
 }
 
 .register-form__rights {
@@ -74,6 +77,12 @@
   justify-content: start;
   text-align: start;
   gap: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.register__btn {
+  width: 100%;
 }
 
 .rights__description {

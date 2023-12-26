@@ -4,9 +4,10 @@
       <h1 class="fields-editor__label">Поля</h1>
       <h2 class="fields-editor__h2">Скрытые поля</h2>
       <base-dots-button buttonText="Добавить поле"></base-dots-button>
-      <h2 class="fields-editor__h2">Поля</h2>
+      <h2 class="fields-editor__h2 mr-tp">Поля</h2>
       <div class="fields-block">
         <div class="fields-block__elem">
+
           <div class="elem-box">
             <div class="label-box"><span class="label-box__label">Фамилия</span><span
                 class="label-box__label">Контакт</span> </div>
@@ -40,6 +41,10 @@
 </template>
 
 <style scoped>
+.mr-tp {
+  margin-top: 2rem;
+}
+
 .add-wrapper {
   background: #3EA748;
   font-family: 'PT Sans', sans-serif;
@@ -51,10 +56,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: 8rem 2.9rem 8rem 3rem;
+  gap: 2.81rem;
+  padding: 7.7rem 2.9rem 8rem 3rem;
   align-items: start;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .fields-editor__label {
@@ -81,7 +86,7 @@
 .fields-block__elem {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.1rem;
 }
 
 .ratio-box {
@@ -89,6 +94,8 @@
   flex-direction: row;
   align-items: center;
   gap: 1.6rem;
+  margin-top: 1.1rem;
+  margin-bottom: .3rem;
 }
 
 .ratio-box__input {
@@ -115,12 +122,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  transform: translateY(-4px);
 }
 
 .label-box {
   display: flex;
   flex-direction: row;
-  gap: 1.6rem;
+  gap: 2rem;
   justify-content: flex-start;
   align-items: center;
   color: #000;

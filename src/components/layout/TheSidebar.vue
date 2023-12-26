@@ -10,8 +10,11 @@
       </p>
       <p>С любовью, ваш <span class="contant-info__description__links">Сибтех</span> </p>
     </div> -->
-    <button v-if="secondButton" class="btn" :class="secModeBtn">{{ secondButton }}</button>
-    <button class="btn " v-if="buttonText" :class="modeBtn">{{ buttonText }}</button>
+    <div class="buttons-block">
+      <button v-if="secondButton" class="btn" :class="secModeBtn">{{ secondButton }}</button>
+      <button class="btn " v-if="buttonText" :class="modeBtn">{{ buttonText }}</button>
+    </div>
+
   </div>
 </template>
 
@@ -39,5 +42,12 @@ export default {
 
 .sidebar__logo {
   width: 11.7rem;
+}
+
+.buttons-block {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7.2vh;
 }
 </style>

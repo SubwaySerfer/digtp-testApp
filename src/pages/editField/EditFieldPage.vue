@@ -1,11 +1,11 @@
 <template>
   <main class="edit-page">
     <the-sidebar buttonText="Сохранить" secondButton="Скрипт" secModeBtn="btn__transparent">
-      <div><img src="" alt=""><span>Назад</span></div>
+      <div class="back-page"><img src="/assets/icons/arrow-icon.svg" alt="arrow back page."><span>Назад</span></div>
       <ul class="edit-sidebar">
         <li>Тип формы</li>
         <li>Сущности</li>
-        <li>Поля</li>
+        <li class="item__active">Поля</li>
         <li>Правила показа полей</li>
         <li>Другие настройки</li>
       </ul>
@@ -28,6 +28,17 @@ export default {
 </script>
 
 <style scoped>
+.back-page {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: .5rem;
+}
+
 .edit-page {
   display: flex;
   flex-direction: row;
@@ -41,5 +52,14 @@ export default {
   gap: 1.6rem;
   text-align: start;
   flex: 1;
+  font-size: 1.55rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2.3rem;
+}
+
+.item__active {
+  color: #3EA748;
 }
 </style>
