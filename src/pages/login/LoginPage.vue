@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import LoginForm from '../../components/login/loginForm.vue';
+import LoginForm from '../../components/login/LoginForm.vue';
 import LoginBackground from '../../components/login/LoginBackground.vue'
 
 export default {
