@@ -3,18 +3,41 @@
     <div class="fields-editor">
       <h1 class="fields-editor__label">Поля</h1>
       <h2 class="fields-editor__h2">Скрытые поля</h2>
-      <base-dots-button buttonText="Добавить поле" @click="addCl"></base-dots-button>
+      <base-dots-button buttonText="Добавить поле"></base-dots-button>
       <div class="modal-list">
         <ul class="add-list">
-          <li class="add-list__elem"><span>Строка</span> <img src="/assets/icons/plus-icon.svg" alt="plus string."></li>
-          <li class="add-list__elem"><span>Число</span> <img src="/assets/icons/plus-icon.svg" alt="plus number."></li>
-          <li class="add-list__elem"><span>Список</span> <img src="/assets/icons/plus-icon.svg" alt="plus list."></li>
+          <li class="add-list__elem" @click="addfield('Фамилия')" id="Фамилия"><span>Фамилия</span> <img
+              src="/assets/icons/plus-icon.svg" alt="plus string.">
+          </li>
+          <li class="add-list__elem" @click="addfield('Имя')" id="Имя"><span>Имя</span> <img
+              src="/assets/icons/plus-icon.svg" alt="plus string.">
+          </li>
+          <li class="add-list__elem" @click="addfield('Строка')" id="Строка"><span>Строка</span> <img
+              src="/assets/icons/plus-icon.svg" alt="plus string.">
+          </li>
+          <li class="add-list__elem" @click="addfield('Число')" id="Число"><span>Число</span> <img
+              src="/assets/icons/plus-icon.svg" alt="plus number.">
+          </li>
+          <li class="add-list__elem" @click="addfield('Список')" id="Список"><span>Список</span> <img
+              src="/assets/icons/plus-icon.svg" alt="plus list.">
+          </li>
         </ul>
       </div>
       <h2 class="fields-editor__h2 mr-tp">Поля</h2>
       <div class="fields-block">
-        <div class="fields-block__elem">
-
+        <div class="fields-block__elem" v-for="field in getFieldsData">
+          <div class="elem-box">
+            <div class="label-box"><span class="label-box__label">{{ field }}</span><span
+                class="label-box__label">Контакт</span> </div>
+            <button class="elem-box__btn" @click="addfield(field)">Удалить поле</button>
+          </div>
+          <input type="text" :placeholder="field" class="elem__input">
+          <div class="ratio-box">
+            <input type="checkbox" class="ratio-box__input" name="last_name">
+            <label for="last_name" class="ratio-box__label">Сделать поле обязательным</label>
+          </div>
+        </div>
+        <!-- <div class="fields-block__elem">
           <div class="elem-box">
             <div class="label-box"><span class="label-box__label">Фамилия</span><span
                 class="label-box__label">Контакт</span> </div>
@@ -25,8 +48,9 @@
             <input type="checkbox" class="ratio-box__input" name="last_name">
             <label for="last_name" class="ratio-box__label">Сделать поле обязательным</label>
           </div>
-        </div>
-        <div class="fields-block__elem">
+        </div> -->
+
+        <!-- <div class="fields-block__elem">
           <div class="elem-box">
             <div class="label-box"><span class="label-box__label">Имя</span><span class="label-box__label">Контакт</span>
             </div>
@@ -37,7 +61,7 @@
             <input type="checkbox" class="ratio-box__input" name="first_name">
             <label for="first_name" class="ratio-box__label">Сделать поле обязательным</label>
           </div>
-        </div>
+        </div> -->
       </div>
       <!--  -->
       <base-dots-button buttonText="Добавить поле"></base-dots-button>
@@ -49,9 +73,28 @@
 
 <script>
 export default {
+  mounted() {
+    this.getFieldsData.forEach(el => this.createClassList(el))
+  },
   methods: {
-    addCl() {
-      console.log('hh')
+    addfield(id) {
+      this.toggleClassList(id)
+      this.$store.commit('fields/addField', id)
+    },
+    createClassList(id) {
+      document.getElementById(`${id}`).classList.add('add-list__elem__active')
+    },
+    toggleClassList(id) {
+      if (this.getFieldsData.includes(id)) {
+        document.getElementById(`${id}`).classList.remove('add-list__elem__active')
+      } else {
+        document.getElementById(`${id}`).classList.add('add-list__elem__active')
+      }
+    }
+  },
+  computed: {
+    getFieldsData() {
+      return this.$store.getters['fields/getCurrentFields']
     }
   }
 }
@@ -77,7 +120,7 @@ export default {
   gap: 2.81rem;
   padding: 7.7rem 2.9rem 8rem 3rem;
   align-items: start;
-  /* justify-content: space-between; */
+  overflow-y: scroll;
 }
 
 .fields-editor__label {
@@ -214,5 +257,9 @@ export default {
   font-weight: 400;
   line-height: normal;
   border-radius: 1rem
+}
+
+.add-list__elem__active {
+  background: rgb(62, 167, 72, 0.3)
 }
 </style>

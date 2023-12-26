@@ -43,6 +43,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow-y: hidden;
 }
 
 .edit-sidebar {
