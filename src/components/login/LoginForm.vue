@@ -16,6 +16,8 @@
   color: #000;
   font-family: 'PT Sans', sans-serif;
   font-style: normal;
+  flex: 1;
+  margin-top: 2.7rem;
 }
 
 .login-form__label {

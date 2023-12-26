@@ -29,7 +29,7 @@ export default {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-
+  height: 90.2rem;
   /* height: 100%; */
 }
 
@@ -38,7 +38,9 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 8rem 12.22vw 6.2rem;
+  width: 62.4rem;
+  /* padding: 8rem 12.22vw 6.2rem; */
+  padding: 8rem 9.5rem 6.2rem 16.5rem
 }
 
 .signin-block__logo {
