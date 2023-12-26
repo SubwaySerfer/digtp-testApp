@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Oranienbaum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 
 html {
   font-size: 10px;
-  font-family: 'Oranienbaum', serif;
+  font-family: 'PT Sans', sans-serif;
   /* font-family: 'Noto Sans', sans-serif; */
 }
 .btn-root {
@@ -17,6 +17,26 @@ html {
 }
 .btn-root_vertical:hover {
   transform: translateY(-3px);
+}
+.text-font {
+  color: #000;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* width: auto; */
+}
+.text-font__description {
+  font-family: 'PT Sans', sans-serif;
+  opacity: 0.5;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.text-font__green {
+  color: #3ea748;
 }
 
 body {
@@ -33,29 +53,40 @@ h1 {
 }
 
 .btn {
-  display: flex;
-  width: 25.2rem;
-  padding: 1.8rem 3.2rem;
-  justify-content: center;
-  height: 100%;
-  align-items: center;
-  gap: 1rem;
-  border-radius: 0.8rem;
-  border: 1px solid #f0d683;
-  color: #000;
-  font-family: Oranienbaum;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  background: linear-gradient(#9f734c, #f0d683);
+  border-radius: 1rem;
+  background: #3ea748;
   cursor: pointer;
+  display: flex;
+  width: 16rem;
+  height: 5rem;
+  padding: 1.6rem 3.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  border: 0;
+  text-wrap: nowrap;
+  color: #fff;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
+.btn__transparent {
+  width: 16rem;
+  height: 5.1rem;
+  color: #3ea748;
+  border-radius: 1rem;
+  border: 1px solid #3ea748;
+  background: transparent;
+}
+.btn__no-border {
+  border: none;
+}
+/* TODO: проверить нужна ли */
 .btn:hover {
-  background: #f0d683;
-  border: 1px solid #9f734c;
+  /* background: #f0d683;
+  border: 1px solid #9f734c; */
 }
 .btn:focus,
 .btn:focus-visible {
@@ -87,6 +118,9 @@ main {
 }
 figure {
   margin: 0;
+}
+ul {
+  list-style-type: none;
 }
 
 a {
